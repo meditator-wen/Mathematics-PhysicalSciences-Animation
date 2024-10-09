@@ -1,5 +1,6 @@
 from manim import *
 import random
+
 from colour import Color
 
 class ProjectileMotionExample3D(ThreeDScene):
@@ -56,7 +57,7 @@ class ProjectileMotionExample3D(ThreeDScene):
         
         for fir in np.arange(angle_start,angle_end,angel_step):
             for second in np.arange(angle_start,angle_end,angel_step):
-                dot_group_original_projectile.add(Dot((0,0,0),0.006,color=Color(rgb=color_to_rgb(random.choice(color_choice_list)))))
+                dot_group_original_projectile.add(Dot((0,0,0),0.006,color=random.choice(color_choice_list)))
                 
         # self.add(dot_group_original_projectile)
         for dot in dot_group_original_projectile:

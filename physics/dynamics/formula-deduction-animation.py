@@ -82,7 +82,11 @@ class FormulaDeduction(Scene):
         self.play(formula_9.animate.shift(np.array((-0.5, 4, 0.0)))) 
         self.play(para.animate.shift(np.array((-1, -0.9, 0.0)))) 
 
-        dot_group_original_projectile=VGroup(*[Dot((0,0,0),0.01,color=Color(rgb=color_to_rgb(random.choice(color_choice_list)))) 
+        # dot_group_original_projectile=VGroup(*[Dot((0,0,0),0.01,color=Color(rgb=color_to_rgb(random.choice(color_choice_list)))) 
+        #                         for _ in [np.pi/3]])
+        
+        
+        dot_group_original_projectile=VGroup(*[Dot((0,0,0),0.01,color=random.choice(color_choice_list)) 
                                 for _ in [np.pi/3]])
         # self.add(dot_group_original_projectile)
         for dot in dot_group_original_projectile:
